@@ -150,9 +150,6 @@ function update(delta) {
     enemy.y += Math.sin(enemy.phase) * enemy.wobble * delta;
     if (enemy.x + enemy.radius < 0) {
       enemy.escaped = true;
-      lives -= 1;
-      updateHud();
-      if (lives <= 0) endGame();
     }
   }
   enemies = enemies.filter((enemy) => !enemy.escaped);
