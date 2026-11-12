@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#070b1c">
+    <title>STAR DEFENDER</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <main class="game-shell">
+      <header class="topbar">
+        <a class="wordmark" href="#" aria-label="STAR DEFENDER">
+          <span class="wordmark-icon" aria-hidden="true">✦</span>
+          STAR<span class="wordmark-accent">DEFENDER</span>
+        </a>
+        <p class="topbar-note">SECTOR 07 <span aria-hidden="true">/</span> DEEP SPACE</p>
+      </header>
+
+      <section class="game-panel" aria-label="宇宙シューティングゲーム">
+        <div class="game-hud" aria-live="polite">
+          <div class="hud-item">
+            <span class="hud-label">SCORE</span>
+            <span class="hud-value" id="score">00000</span>
+          </div>
+          <div class="hud-center"><span class="status-dot"></span> <span id="status">READY</span></div>
+          <div class="hud-item hud-lives">
+            <span class="hud-label">LIVES</span>
+            <span class="hud-value" id="lives" aria-label="残りライフ">♥ ♥ ♥</span>
+          </div>
+        </div>
+
+        <div class="canvas-wrap">
+          <canvas id="game" width="960" height="540" aria-label="宇宙船を操作して敵を撃ち落とすゲーム">
+            このゲームを遊ぶには、Canvasに対応したブラウザーが必要です。
+          </canvas>
+          <div class="overlay" id="overlay">
+            <div class="overlay-content">
+              <span class="eyebrow" id="overlay-eyebrow">INCOMING TRANSMISSION</span>
+              <h1 id="overlay-title">宇宙を守れ。</h1>
+              <p id="overlay-copy">右から現れる敵を撃ち落として、できるだけ長く生き残ろう。</p>
+              <button id="start-button" type="button">ゲームスタート <span aria-hidden="true">→</span></button>
+              <p class="overlay-hint">移動 <kbd>↑</kbd><kbd>↓</kbd><kbd>←</kbd><kbd>→</kbd> または <kbd>W</kbd><kbd>A</kbd><kbd>S</kbd><kbd>D</kbd>　射撃 <kbd>SPACE</kbd></p>
+            </div>
+          </div>
+        </div>
+
+        <footer class="game-footer">
+          <span>MISSION: SURVIVE THE SWARM</span>
+          <span class="footer-right"><span class="footer-dot"></span> SYSTEM ONLINE</span>
+        </footer>
+      </section>
+
+      <p class="page-note">敵にぶつかるとライフを失います。敵を逃してもライフが減るので注意！</p>
+    </main>
+  </body>
+</html>
